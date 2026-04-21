@@ -69,6 +69,23 @@ AI/LLM       [█░░░░░░░░░░░] 8%  ({done}/{total})
 ⚠️ Weak: {Topics}
 ```
 
+### Section Breadcrumb (MUST SHOW EVERY RESPONSE)
+
+At the top of EVERY response during active learning, show current track breadcrumb:
+
+```
+📍 [DSA > Arrays > Contains Duplicate]
+```
+
+Or for other tracks:
+- `📍 [System Design > Caching > LRU Cache]`
+- `📍 [Java Core > Concurrency > ExecutorService]`
+- `📍 [AI/LLM > RAG > Vector Databases]`
+
+Format: `📍 [TRACK > CATEGORY > CURRENT_TOPIC]`
+
+This keeps user always aware of where they are in the journey.
+
 **Note:** No "Today's plan" or day-based schedule. Progress is topic-based. User drives pace.
 
 ---
