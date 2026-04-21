@@ -67,35 +67,38 @@ Files created:
 ### First Time (Onboarding)
 
 ```
-/mentor
+/dev-mentor-ai
 ```
 
-DevMentor asks structured questions:
+DevMentor asks structured questions (one at a time via multi-choice):
 - Current role and experience
-- Target role and timeline
+- Target role
 - Language proficiency
 - DSA / System Design / AI-LLM level
-- Time availability
+- Pace preference (Self-paced / Steady / Intensive)
 
-Then generates your personalized dashboard.
+Then generates your personalized dashboard and saves profile to `~/.claude/dev-mentor-ai/user-profile.json`.
 
 ### Ongoing Sessions
 
 ```
-/mentor
+/dev-mentor-ai
 ```
 
-Loads your progress, shows dashboard, continues from where you left off.
+Auto-loads your profile from JSON, shows dashboard, resumes from `nextFocus` — no re-onboarding.
 
-### Modes
+### Switching Modes
 
-Switch modes mid-session:
-- `/mentor mentor` — Guided learning (default)
-- `/mentor interview` — Timed, no hints
-- `/mentor caveman` — Terse, high-density responses
-- `/mentor deep-dive` — One topic, thorough
-- `/mentor revision` — Re-solve past problems
-- `/mentor mock` — Full interview simulation
+Modes are conversational — just tell DevMentor what you want:
+
+- **Mentor Mode** (default): "guide me through this"
+- **Interview Mode:** "give me interview mode — timed, no hints"
+- **Caveman Mode:** say "caveman mode" to activate terse responses
+- **Deep Dive Mode:** "deep dive on {topic}"
+- **Revision Mode:** "revise past problems on {pattern}"
+- **Mock Mode:** "start mock interview"
+
+DevMentor switches mode immediately based on conversational intent. No subcommands needed.
 
 ## Hot Topics System
 

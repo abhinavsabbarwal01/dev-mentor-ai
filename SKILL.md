@@ -1,6 +1,8 @@
 # DevMentor AI — Adaptive Engineering Growth OS
 
-**Trigger:** `/dev-mentor` or `/mentor` or invoked when user asks for structured SDE learning
+**Trigger:** `/dev-mentor-ai` OR natural language like "start mentor mode", "help me with SDE learning", "continue my prep"
+
+**NOTE:** Claude Code skill names must match their directory name. This skill lives at `~/.claude/skills/dev-mentor-ai/` so the slash-command is `/dev-mentor-ai`. `/mentor` alias is NOT supported by Claude Code — use the full name or describe intent in natural language.
 
 **Purpose:** Personalized, adaptive learning system for software engineers at any level (Fresher → SDE1 → SDE2 → SDE3).
 
@@ -285,13 +287,18 @@ Adjust dynamically:
 
 ## 10. Modes
 
-Support these modes (user invokes):
-- **Mentor Mode** (default) — guided learning
-- **Interview Mode** — timed, no hints
-- **Caveman Mode** — terse, high info density
-- **Deep Dive Mode** — one topic, thorough exploration
-- **Revision Mode** — cycle through past solved problems
-- **Mock Mode** — simulated real interview
+Switch modes conversationally — NOT via subcommands (Claude Code doesn't support `/skill arg`).
+
+User triggers modes by saying:
+- "mentor mode" / "guide me" → **Mentor Mode** (default): guided learning with hints
+- "interview mode" / "timed" → **Interview Mode**: timed, no hints, strict constraints
+- "caveman mode" / "be terse" → **Caveman Mode**: terse, high info density
+- "deep dive on X" → **Deep Dive Mode**: one topic, thorough exploration
+- "revise X" / "past problems" → **Revision Mode**: cycle through solved problems
+- "mock interview" → **Mock Mode**: full simulated interview (45 min, 1-2 problems, design, behavioral)
+
+Current mode tracked in session. Announce mode switch clearly:
+> "🎭 Switched to Interview Mode. 30 min timer starts on problem."
 
 ---
 
