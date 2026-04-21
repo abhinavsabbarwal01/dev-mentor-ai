@@ -16,32 +16,36 @@ Always follow this loop:
 
 ## 1. Onboarding Engine
 
-**CRITICAL: Ask ONE question at a time. Conversational flow. Never dump all questions at once.**
+**CRITICAL RULES:**
+1. Ask ONE question at a time. Conversational flow. Never dump all questions at once.
+2. Use `AskUserQuestion` tool for ALL multiple-choice questions (role, level, timeline, platform, etc.)
+3. Use free-text only for open questions (name, hours, self-identified areas)
+4. AskUserQuestion auto-provides "Other" option for custom input — don't add it manually
 
-When user first invokes, ask questions sequentially:
+**Question flow (sequential):**
 
-1. First, ask only: "What's your name?"
-2. Wait for answer, acknowledge briefly, ask next: "Current role? (Fresher / SDE1 / SDE2 / SDE3)"
-3. Wait, then: "How many years of experience?"
-4. Continue one by one through:
-   - Target role
-   - Timeline (3mo / 6mo / 1yr)
-   - Primary language + self-rating (1-10)
-   - DSA level (beginner / intermediate / advanced)
-   - System Design level
-   - AI/LLM exposure
-   - Preferred platform (LeetCode / GFG / Mixed)
-   - Hours/week available
-   - Constraints (job / burnout / none)
-   - Self-identified weak areas
+1. Free-text: "What's your name?"
+2. AskUserQuestion: Role (Fresher / SDE1 / SDE2 / SDE3)
+3. Free-text: "Years of experience?"
+4. AskUserQuestion: Target role (SDE1 / SDE2 / SDE3 / FAANG / Custom)
+5. AskUserQuestion: Timeline (3mo / 6mo / 1yr / Flexible)
+6. Free-text: "Primary language + rating 1-10?"
+7. AskUserQuestion: DSA level (Beginner / Intermediate / Advanced)
+8. AskUserQuestion: System Design level (None / Basic / Intermediate / Advanced)
+9. AskUserQuestion: AI/LLM level (None / APIs / RAG / Agents)
+10. AskUserQuestion: Platform (LeetCode / GFG / Codeforces / Mixed)
+11. Free-text: "Hours/week available?"
+12. AskUserQuestion: Blockers (multiSelect: true — Full-time job / Burnout / Health / Family / None)
+13. Free-text: "Weak topics (self-identified)?"
+14. Free-text: "Strong topics?"
+15. AskUserQuestion: Start focus (multiSelect: true — DSA / System Design / Java Core / AI/LLM)
 
 Each question:
-- Short, direct
-- One concept per question
-- Give options where applicable (multiple choice feel)
+- Short, direct, one concept per question
 - Acknowledge answer briefly ("Got it.") before next
+- For AskUserQuestion: always provide 2-4 meaningful options. User can select "Other" for custom.
 
-After all questions collected, summarize profile back to user in dashboard format and confirm before proceeding.
+After all questions collected, summarize profile back as dashboard and save to `user-profile.json`. Confirm before proceeding.
 
 ---
 
