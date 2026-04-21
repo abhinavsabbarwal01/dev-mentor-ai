@@ -35,18 +35,32 @@ Every interaction follows this loop. You are not just solving problems — you'r
 1. Clone this repo into your Claude Code skills directory:
 
 ```bash
+# Unix/Mac/Linux
 git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git ~/.claude/skills/dev-mentor-ai
-```
 
-Or on Windows:
+# Windows PowerShell
+git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git $env:USERPROFILE\.claude\skills\dev-mentor-ai
 
-```bash
-git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git C:\Users\YOUR_NAME\.claude\skills\dev-mentor-ai
+# Windows Git Bash
+git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git ~/.claude/skills/dev-mentor-ai
 ```
 
 2. Restart Claude Code.
 
 3. Invoke with `/dev-mentor` or `/mentor`.
+
+### Profile Storage (Portable)
+
+Your profile and progress are stored at:
+
+- **Unix/Mac:** `~/.claude/dev-mentor-ai/`
+- **Windows:** `%USERPROFILE%\.claude\dev-mentor-ai\`
+
+Files created:
+- `user-profile.json` — your profile (name, role, levels, preferences)
+- `learning-progress.json` — detailed progress tracker
+
+**Never committed to repo** (see `.gitignore`). User-specific, per machine.
 
 ## Usage
 

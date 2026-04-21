@@ -19,12 +19,36 @@ Always follow this loop:
 **CRITICAL FIRST STEP: Check for existing profile.**
 
 On EVERY skill invocation:
-1. Read `C:\Users\hardi\user-profile.json` (or equivalent path)
+1. Read profile from platform-agnostic path (see below)
 2. If file exists AND has valid profile → **SKIP onboarding**, load profile, show dashboard, resume from `nextFocus`
 3. If file doesn't exist → run full onboarding
 4. If file partial → resume onboarding from missing fields only
 
 Never re-onboard an existing user. Always check JSON first.
+
+### Profile Path Resolution (platform-agnostic)
+
+Profile stored at: `{HOME}/.claude/dev-mentor-ai/user-profile.json`
+
+Resolve HOME per platform:
+- **Windows:** `%USERPROFILE%` → e.g. `C:\Users\abhinav\.claude\dev-mentor-ai\user-profile.json`
+- **macOS/Linux:** `$HOME` → e.g. `/home/user/.claude/dev-mentor-ai/user-profile.json`
+
+Use shell expansion or env vars — NEVER hardcode absolute paths.
+
+Example commands:
+```bash
+# Unix
+cat ~/.claude/dev-mentor-ai/user-profile.json
+
+# Windows PowerShell
+cat $env:USERPROFILE\.claude\dev-mentor-ai\user-profile.json
+
+# Windows Git Bash
+cat ~/.claude/dev-mentor-ai/user-profile.json
+```
+
+First-time setup creates directory: `mkdir -p ~/.claude/dev-mentor-ai` (Unix) or equivalent on Windows.
 
 ---
 
@@ -327,9 +351,13 @@ Check: user-profile.json exists?
     └── NO → Start onboarding (Q1: Name)
 ```
 
-**Profile file locations (check in order):**
-1. `C:\Users\hardi\user-profile.json` (Windows)
-2. `~/user-profile.json` (Unix/Mac)
-3. `./user-profile.json` (current dir)
+**Profile file path (portable, per-user):**
+
+`{HOME}/.claude/dev-mentor-ai/user-profile.json`
+
+- Windows: `%USERPROFILE%\.claude\dev-mentor-ai\user-profile.json`
+- Unix/Mac: `~/.claude/dev-mentor-ai/user-profile.json`
 
 If found and valid (has name, role, progress fields) → RESUME. Never re-onboard.
+
+Progress file same location: `{HOME}/.claude/dev-mentor-ai/learning-progress.json`
