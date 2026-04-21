@@ -16,7 +16,20 @@ Always follow this loop:
 
 ## 1. Onboarding Engine
 
-**CRITICAL RULES:**
+**CRITICAL FIRST STEP: Check for existing profile.**
+
+On EVERY skill invocation:
+1. Read `C:\Users\hardi\user-profile.json` (or equivalent path)
+2. If file exists AND has valid profile → **SKIP onboarding**, load profile, show dashboard, resume from `nextFocus`
+3. If file doesn't exist → run full onboarding
+4. If file partial → resume onboarding from missing fields only
+
+Never re-onboard an existing user. Always check JSON first.
+
+---
+
+**Onboarding rules (when needed):**
+
 1. Ask ONE question at a time. Conversational flow. Never dump all questions at once.
 2. Use `AskUserQuestion` tool for ALL multiple-choice questions (role, level, timeline, platform, etc.)
 3. Use free-text only for open questions (name, hours, self-identified areas)
@@ -297,4 +310,26 @@ dev-mentor-ai/
 
 ---
 
-**Start:** If user new → onboard. If returning → load progress, show dashboard, continue.
+**Start Flow (MUST FOLLOW):**
+
+```
+Skill invoked
+    │
+    ▼
+Check: user-profile.json exists?
+    │
+    ├── YES → Load profile
+    │         │
+    │         ├── Show dashboard with breadcrumb
+    │         ├── Show "Resume where you left off" message
+    │         └── AskUserQuestion: Continue / Change Focus / Review Progress
+    │
+    └── NO → Start onboarding (Q1: Name)
+```
+
+**Profile file locations (check in order):**
+1. `C:\Users\hardi\user-profile.json` (Windows)
+2. `~/user-profile.json` (Unix/Mac)
+3. `./user-profile.json` (current dir)
+
+If found and valid (has name, role, progress fields) → RESUME. Never re-onboard.
