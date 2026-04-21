@@ -1,0 +1,74 @@
+{
+  "profile": {
+    "name": "Sample User",
+    "role": "SDE1",
+    "experience": "2 years",
+    "company": "Tech Co",
+    "stack": ["Java", "Spring Boot", "PostgreSQL"],
+    "target": "SDE2",
+    "timeline": "6 months",
+    "startDate": "2026-04-22"
+  },
+  "skills": {
+    "languages": {
+      "Java": 7,
+      "Python": 5,
+      "JavaScript": 4
+    },
+    "dsaLevel": "intermediate",
+    "systemDesignLevel": "basic",
+    "aiLlmLevel": "used_apis"
+  },
+  "constraints": {
+    "hoursPerWeek": 10,
+    "platform": "LeetCode",
+    "blockers": ["full_time_job"],
+    "learningStyle": "hands_on"
+  },
+  "progress": {
+    "dsa": {
+      "totalSolved": 45,
+      "byDifficulty": {
+        "easy": 20,
+        "medium": 22,
+        "hard": 3
+      },
+      "byPattern": {
+        "arrays": 12,
+        "two_pointers": 5,
+        "sliding_window": 8,
+        "hashmap": 10,
+        "dp": 4,
+        "trees": 6
+      }
+    },
+    "systemDesign": {
+      "conceptsCompleted": 3,
+      "designsCompleted": 1
+    },
+    "javaCore": {
+      "topicsCompleted": 5
+    },
+    "aiLlm": {
+      "topicsCompleted": 2
+    }
+  },
+  "dna": {
+    "strengths": ["hashmap_patterns", "array_manipulation"],
+    "weaknesses": ["dynamic_programming", "graphs"],
+    "averageSolveTime": {
+      "easy": "12 min",
+      "medium": "35 min",
+      "hard": "60+ min"
+    },
+    "firstTrySuccessRate": "65%"
+  },
+  "consistency": {
+    "streakDays": 14,
+    "totalDaysActive": 45,
+    "consistencyScore": 7.5
+  },
+  "readinessScore": 6.2,
+  "lastSession": "2026-04-22",
+  "nextFocus": ["sliding_window", "dp_beginner"]
+}

@@ -1,0 +1,23 @@
+# User-specific progress (never commit)
+progress.json
+user-profile.json
+*.user.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Temp
+tmp/
+temp/

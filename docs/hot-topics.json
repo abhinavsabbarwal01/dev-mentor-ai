@@ -1,0 +1,239 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-22",
+  "description": "Community-driven hot topics for SDE interview prep. Fork this file and contribute via PR.",
+  "dsa": {
+    "subtopics": {
+      "sliding_window": {
+        "priority": "high",
+        "trend": "Very frequently asked in 2025-2026 interviews",
+        "questions": [
+          {
+            "name": "Longest Substring Without Repeating Characters",
+            "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+            "difficulty": "medium"
+          },
+          {
+            "name": "Minimum Window Substring",
+            "url": "https://leetcode.com/problems/minimum-window-substring/",
+            "difficulty": "hard"
+          },
+          {
+            "name": "Longest Repeating Character Replacement",
+            "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+            "difficulty": "medium"
+          }
+        ]
+      },
+      "two_pointers": {
+        "priority": "high",
+        "trend": "Foundational, asked in every interview",
+        "questions": [
+          {
+            "name": "Two Sum",
+            "url": "https://leetcode.com/problems/two-sum/",
+            "difficulty": "easy"
+          },
+          {
+            "name": "3Sum",
+            "url": "https://leetcode.com/problems/3sum/",
+            "difficulty": "medium"
+          },
+          {
+            "name": "Container With Most Water",
+            "url": "https://leetcode.com/problems/container-with-most-water/",
+            "difficulty": "medium"
+          }
+        ]
+      },
+      "dynamic_programming": {
+        "priority": "high",
+        "trend": "Critical for SDE2+ roles",
+        "questions": [
+          {
+            "name": "Longest Increasing Subsequence",
+            "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+            "difficulty": "medium"
+          },
+          {
+            "name": "Coin Change",
+            "url": "https://leetcode.com/problems/coin-change/",
+            "difficulty": "medium"
+          },
+          {
+            "name": "Edit Distance",
+            "url": "https://leetcode.com/problems/edit-distance/",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "graphs": {
+        "priority": "medium",
+        "trend": "Trending for SDE2+ backend roles",
+        "questions": [
+          {
+            "name": "Number of Islands",
+            "url": "https://leetcode.com/problems/number-of-islands/",
+            "difficulty": "medium"
+          },
+          {
+            "name": "Course Schedule",
+            "url": "https://leetcode.com/problems/course-schedule/",
+            "difficulty": "medium"
+          }
+        ]
+      },
+      "trees": {
+        "priority": "medium",
+        "trend": "Classic interview pattern",
+        "questions": [
+          {
+            "name": "Binary Tree Level Order Traversal",
+            "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+            "difficulty": "medium"
+          },
+          {
+            "name": "Lowest Common Ancestor of a Binary Tree",
+            "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+            "difficulty": "medium"
+          }
+        ]
+      }
+    }
+  },
+  "javaCore": {
+    "subtopics": {
+      "concurrency": {
+        "priority": "high",
+        "trend": "Heavily asked for backend SDE2/SDE3",
+        "topics": [
+          "ExecutorService & ThreadPoolExecutor",
+          "CompletableFuture",
+          "Thread pools sizing",
+          "ReentrantLock vs synchronized",
+          "ConcurrentHashMap internals",
+          "volatile keyword",
+          "AtomicInteger, AtomicReference"
+        ]
+      },
+      "collections_internals": {
+        "priority": "high",
+        "trend": "Standard SDE2 question",
+        "topics": [
+          "HashMap internals (hashing, resize, load factor)",
+          "ConcurrentHashMap internals",
+          "ArrayList vs LinkedList trade-offs",
+          "TreeMap use cases"
+        ]
+      },
+      "jvm_memory": {
+        "priority": "medium",
+        "trend": "Required for SDE3 and backend roles",
+        "topics": [
+          "Heap vs Stack",
+          "Garbage Collection (G1GC, ZGC)",
+          "Class loading",
+          "Memory leaks detection"
+        ]
+      }
+    }
+  },
+  "systemDesign": {
+    "subtopics": {
+      "rate_limiter": {
+        "priority": "high",
+        "trend": "Very common SDE2 design question",
+        "topics": [
+          "Token Bucket",
+          "Leaky Bucket",
+          "Sliding Window Counter",
+          "Fixed Window"
+        ]
+      },
+      "caching": {
+        "priority": "high",
+        "trend": "Asked in every backend interview",
+        "topics": [
+          "Cache invalidation strategies",
+          "Write-through vs write-back",
+          "LRU, LFU cache",
+          "Distributed caching (Redis)"
+        ]
+      },
+      "consistent_hashing": {
+        "priority": "high",
+        "trend": "Key for distributed systems design",
+        "topics": [
+          "Ring topology",
+          "Virtual nodes",
+          "Data distribution",
+          "Re-balancing"
+        ]
+      },
+      "message_queues": {
+        "priority": "high",
+        "trend": "Critical for scalable systems",
+        "topics": [
+          "Kafka architecture",
+          "Partitioning",
+          "Consumer groups",
+          "Exactly-once vs at-least-once"
+        ]
+      }
+    }
+  },
+  "aiLlm": {
+    "subtopics": {
+      "rag": {
+        "priority": "high",
+        "trend": "Hottest AI topic in 2025-2026",
+        "topics": [
+          "Embedding models",
+          "Vector databases (Pinecone, Chroma, Weaviate)",
+          "Document chunking strategies",
+          "Hybrid search (BM25 + dense)",
+          "RAG evaluation metrics"
+        ]
+      },
+      "agentic_ai": {
+        "priority": "high",
+        "trend": "Rapidly growing, agentic systems taking over",
+        "topics": [
+          "ReAct pattern (Reasoning + Acting)",
+          "Tool calling",
+          "Multi-agent orchestration",
+          "Chain-of-thought",
+          "Self-reflection"
+        ]
+      },
+      "langchain": {
+        "priority": "medium",
+        "trend": "Industry standard for LLM apps",
+        "topics": [
+          "Chains (Sequential, routing)",
+          "LCEL (LangChain Expression Language)",
+          "Memory management",
+          "RAG chains"
+        ]
+      },
+      "langgraph": {
+        "priority": "high",
+        "trend": "Preferred for complex agentic workflows",
+        "topics": [
+          "Graph state management",
+          "Multi-agent systems",
+          "Human-in-the-loop",
+          "Error handling and retries"
+        ]
+      }
+    }
+  },
+  "contributors": [],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-04-22",
+      "changes": "Initial hot-topics.json with core DSA, Java, System Design, AI/LLM topics"
+    }
+  ]
+}
