@@ -55,19 +55,28 @@ After onboarding, always show dashboard:
 👤 {Name} — {Role} ({Experience})
 🎯 Goal: {Target} | Pace: {Self-paced / Steady / Intensive}
 
-📊 Progress:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 CURRENT SECTION → {TRACK}
+🎯 Current Topic → {Topic/Problem name}
+⏭️  Up Next      → {Next topic/problem}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 PROGRESS:
 DSA          [███████░░░░░] 58% ({done}/{total})
 Java Core    [████░░░░░░░░] 33% ({done}/{total})
 System Design[██░░░░░░░░░░] 18% ({done}/{total})
 AI/LLM       [█░░░░░░░░░░░] 8%  ({done}/{total})
 
-🎯 Current Topic: {What user is working on}
-⏭  Next Up: {Next topic/problem in queue}
-✅ Readiness: {Score based on completion + confidence}
-
+✅ Readiness: {Score}
 💪 Strong: {Topics}
 ⚠️ Weak: {Topics}
 ```
+
+**Format rules:**
+- Current Section = active track (e.g., `DSA`, `Java Core`, `System Design`, `AI/LLM`)
+- Current Topic = exact problem/topic user working on now
+- Up Next = what's queued after current completes
+- These three lines MUST be visible at top of dashboard, clearly separated with horizontal rule
 
 ### Section Breadcrumb (MUST SHOW EVERY RESPONSE)
 

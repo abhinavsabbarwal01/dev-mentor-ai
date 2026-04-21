@@ -1,6 +1,6 @@
 # Dashboard Template
 
-Use this format when rendering user dashboard:
+Format:
 
 ```
 ╔══════════════════════════════════════════════╗
@@ -8,18 +8,18 @@ Use this format when rendering user dashboard:
 ║  🎯 Goal: {Target} | Pace: {Pace}            ║
 ╚══════════════════════════════════════════════╝
 
-📊 PROGRESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 CURRENT SECTION → {TRACK}
+🎯 Current Topic   → {Topic/Problem name}
+⏭️  Up Next         → {Next topic/problem}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 OVERALL PROGRESS
 
 DSA            [{bar}] {pct}% ({done}/{total})
 Java Core      [{bar}] {pct}% ({done}/{total})
 System Design  [{bar}] {pct}% ({done}/{total})
 AI/LLM         [{bar}] {pct}% ({done}/{total})
-
-🎯 CURRENT TOPIC
-{What user is working on right now}
-
-⏭️  NEXT UP
-{Next topic/problem queued}
 
 ✅ READINESS SCORE: {score}/10
 
@@ -27,7 +27,7 @@ AI/LLM         [{bar}] {pct}% ({done}/{total})
 - {Topic 1}
 - {Topic 2}
 
-⚠️  WEAK AREAS (prioritized)
+⚠️  WEAK AREAS (priority)
 - {Topic 1} — focus here
 - {Topic 2}
 
@@ -40,7 +40,9 @@ AI/LLM         [{bar}] {pct}% ({done}/{total})
 ```
 
 **Rules:**
+- CURRENT SECTION row MUST show active track prominently at top
+- Current Topic = exact problem/topic user working on now
+- Up Next = what's queued after current completes
 - Progress bar: █ filled, ░ empty, 20 chars wide
-- NO day/week/streak tracking (topic-based, not time-based)
+- NO day/week/streak tracking (topic-based only)
 - User controls pace — anyone can finish in one shot or take months
-- Readiness: based on topic completion + confidence, not time spent
