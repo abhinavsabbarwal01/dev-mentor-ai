@@ -183,6 +183,18 @@ This is an open-source, community-driven project. Anyone can:
 
 MIT — Use freely, attribute fairly, share generously.
 
+## Authors
+
+- **Abhinav Sabbarwal** — Author, creator, maintainer ([GitHub](https://github.com/abhinavsabbarwal01))
+- **Claude (Anthropic)** — Co-author, built with Claude Code assistance
+
 ## Credits
 
-Built with ❤️ using Claude Code. Inspired by the belief that every engineer deserves a personalized growth coach.
+Built with ❤️ by Abhinav with Claude Code assistance. Inspired by the belief that every engineer deserves a personalized growth coach, tailored to their level and pace — not a one-size-fits-all curriculum.
+
+### Attribution
+
+If you fork or use this skill:
+- Keep credit to original author(s)
+- Contributions welcome via PRs to `docs/hot-topics.json`
+- Major feature PRs should discuss in an issue first
