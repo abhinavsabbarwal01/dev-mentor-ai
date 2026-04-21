@@ -32,22 +32,47 @@ Every interaction follows this loop. You are not just solving problems — you'r
 
 ## Installation
 
-1. Clone this repo into your Claude Code skills directory:
+### Option 1: One-Liner (Easiest ⚡)
+
+**Unix/Mac/Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/abhinavsabbarwal01/dev-mentor-ai/main/install.sh | bash
+```
+
+**Windows PowerShell:**
+```powershell
+irm https://raw.githubusercontent.com/abhinavsabbarwal01/dev-mentor-ai/main/install.ps1 | iex
+```
+
+That's it. Restart Claude Code, then run `/dev-mentor-ai`.
+
+### Option 2: Git Clone (Manual)
 
 ```bash
 # Unix/Mac/Linux
-git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git ~/.claude/skills/dev-mentor-ai
+git clone https://github.com/abhinavsabbarwal01/dev-mentor-ai.git ~/.claude/skills/dev-mentor-ai
 
 # Windows PowerShell
-git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git $env:USERPROFILE\.claude\skills\dev-mentor-ai
-
-# Windows Git Bash
-git clone https://github.com/YOUR_USERNAME/dev-mentor-ai.git ~/.claude/skills/dev-mentor-ai
+git clone https://github.com/abhinavsabbarwal01/dev-mentor-ai.git $env:USERPROFILE\.claude\skills\dev-mentor-ai
 ```
 
-2. Restart Claude Code.
+Then restart Claude Code.
 
-3. Invoke with `/dev-mentor` or `/mentor`.
+### Option 3: Download ZIP (No Git Needed)
+
+1. Go to https://github.com/abhinavsabbarwal01/dev-mentor-ai
+2. Click `Code` → `Download ZIP`
+3. Extract to:
+   - Unix/Mac: `~/.claude/skills/dev-mentor-ai/`
+   - Windows: `%USERPROFILE%\.claude\skills\dev-mentor-ai\`
+4. Restart Claude Code.
+
+### After Installation
+
+Invoke with: `/dev-mentor-ai`
+
+First time → onboarding asks questions, creates profile.
+Subsequent times → resumes from where you left off.
 
 ### Profile Storage (Portable)
 
