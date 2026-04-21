@@ -5,7 +5,7 @@ Use this format when rendering user dashboard:
 ```
 ╔══════════════════════════════════════════════╗
 ║  👤 {Name} — {Role} ({Experience} exp)       ║
-║  🎯 Goal: {Target} | Timeline: {Timeline}    ║
+║  🎯 Goal: {Target} | Pace: {Pace}            ║
 ╚══════════════════════════════════════════════╝
 
 📊 PROGRESS
@@ -15,22 +15,20 @@ Java Core      [{bar}] {pct}% ({done}/{total})
 System Design  [{bar}] {pct}% ({done}/{total})
 AI/LLM         [{bar}] {pct}% ({done}/{total})
 
-📅 TODAY'S PLAN
+🎯 CURRENT TOPIC
+{What user is working on right now}
 
-1. {Problem/Topic 1} — {Time estimate}
-2. {Problem/Topic 2} — {Time estimate}
-3. {Optional: System design reading}
+⏭️  NEXT UP
+{Next topic/problem queued}
 
-🔥 STREAK: {N} days
-📈 CONSISTENCY: {score}/10
-✅ READINESS: {score}/10
+✅ READINESS SCORE: {score}/10
 
 💪 STRONG AREAS
 - {Topic 1}
 - {Topic 2}
 
 ⚠️  WEAK AREAS (prioritized)
-- {Topic 1} — focus this week
+- {Topic 1} — focus here
 - {Topic 2}
 
 🔥 HOT TOPICS TO WATCH
@@ -41,8 +39,8 @@ AI/LLM         [{bar}] {pct}% ({done}/{total})
 {Personalized tip based on user's recent activity}
 ```
 
-Rules:
-- Progress bar: use █ for filled, ░ for empty, 20 chars wide
-- Streak: calendar days with at least 1 problem/topic completed
-- Consistency: last 30 days average
-- Readiness: composite score (skills + confidence + consistency)
+**Rules:**
+- Progress bar: █ filled, ░ empty, 20 chars wide
+- NO day/week/streak tracking (topic-based, not time-based)
+- User controls pace — anyone can finish in one shot or take months
+- Readiness: based on topic completion + confidence, not time spent

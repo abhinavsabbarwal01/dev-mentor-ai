@@ -1,75 +1,65 @@
 # Onboarding Flow — Sequential
 
-**Rule: One question per message. Wait for user answer. Then next.**
+**Rules:**
+1. One question per message. Wait for user answer. Then next.
+2. Use `AskUserQuestion` tool for multi-choice questions.
+3. Use free-text for open answers.
+4. **NO time-based questions** (no "hours/week", no "schedule"). Topic-based only.
 
 ## Question Sequence
 
-### Q1: Name
+### Q1: Name (free-text)
 "What's your name?"
 
-### Q2: Role
-"Got it, {name}. What's your current role?
-(Fresher / SDE1 / SDE2 / SDE3 / Other)"
+### Q2: Role (AskUserQuestion)
+Options: Fresher / SDE1 / SDE2 / SDE3
 
-### Q3: Experience
+### Q3: Experience (free-text)
 "How many years/months of experience?"
 
-### Q4: Target Role
-"What's your target role?
-(SDE1 / SDE2 / SDE3 / Specific company)"
+### Q4: Target Role (AskUserQuestion)
+Options: SDE1 / SDE2 / SDE3 / FAANG / Custom (user types)
 
-### Q5: Timeline
-"Timeline for this goal?
-(3 months / 6 months / 1 year / Flexible)"
+### Q5: Pace Preference (AskUserQuestion) — NOT timeline
+Options:
+- Self-paced (no pressure, learn when convenient)
+- Steady (consistent daily progress)
+- Intensive (push hard, complete fast)
 
-### Q6: Primary Language
-"Primary programming language? Rate yourself 1-10."
+### Q6: Primary Language (free-text)
+"Primary language + self-rating 1-10?"
 
-### Q7: DSA Level
-"DSA level?
+### Q7: DSA Level (AskUserQuestion)
+Options:
 - Beginner (< 50 problems)
-- Intermediate (50-200 problems, know patterns)
-- Advanced (200+, medium-hard comfort)"
+- Intermediate (50-200, know patterns)
+- Advanced (200+, medium-hard comfort)
 
-### Q8: System Design Level
-"System Design level?
-- None (never studied)
-- Basic (caching, load balancing)
-- Intermediate (CAP, sharding, queues)
-- Advanced (distributed systems)"
+### Q8: System Design Level (AskUserQuestion)
+Options: None / Basic / Intermediate / Advanced
 
-### Q9: AI/LLM Level
-"AI/LLM exposure?
-- None
-- Used APIs (OpenAI, Claude)
-- Built RAG apps
-- Built agents (LangChain, LangGraph)"
+### Q9: AI/LLM Level (AskUserQuestion)
+Options: None / Used APIs / Built RAG / Built Agents
 
-### Q10: Platform
-"Preferred platform?
-(LeetCode / GFG / Codeforces / Mixed)"
+### Q10: Platform (AskUserQuestion)
+Options: LeetCode / GeeksforGeeks / Codeforces / Mixed
 
-### Q11: Time
-"How many hours per week can you commit?"
+### Q11: Weak Areas (free-text)
+"What topics do you struggle with?"
 
-### Q12: Blockers
-"Any blockers?
-(Full-time job / Burnout / Health / Family / None)"
-
-### Q13: Weak Areas
-"What topics do you struggle with most? (self-identified)"
-
-### Q14: Strong Areas
+### Q12: Strong Areas (free-text)
 "What topics are you confident in?"
 
-### Q15: Focus Start
-"Where do you want to start first?
-(DSA / System Design / Java Core / AI/LLM)"
+### Q13: Start Focus (AskUserQuestion, multiSelect: true)
+Options: DSA / System Design / Java Core / AI/LLM
 
 ---
 
 ## After All Answers
 
-Summarize profile as dashboard + save to `user-profile.json`.
+1. Summarize profile as dashboard
+2. Save to `user-profile.json`
+3. Confirm: "Profile saved. Ready to start?"
+4. Show first topic/problem based on Start Focus + level
 
-Confirm: "Profile saved. Ready to start?"
+**IMPORTANT:** Never create day/week schedules. User completes at own pace.

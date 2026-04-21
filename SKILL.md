@@ -28,17 +28,15 @@ Always follow this loop:
 2. AskUserQuestion: Role (Fresher / SDE1 / SDE2 / SDE3)
 3. Free-text: "Years of experience?"
 4. AskUserQuestion: Target role (SDE1 / SDE2 / SDE3 / FAANG / Custom)
-5. AskUserQuestion: Timeline (3mo / 6mo / 1yr / Flexible)
+5. AskUserQuestion: Pace preference (Self-paced / Steady / Intensive) — NOT time-based
 6. Free-text: "Primary language + rating 1-10?"
 7. AskUserQuestion: DSA level (Beginner / Intermediate / Advanced)
 8. AskUserQuestion: System Design level (None / Basic / Intermediate / Advanced)
 9. AskUserQuestion: AI/LLM level (None / APIs / RAG / Agents)
 10. AskUserQuestion: Platform (LeetCode / GFG / Codeforces / Mixed)
-11. Free-text: "Hours/week available?"
-12. AskUserQuestion: Blockers (multiSelect: true — Full-time job / Burnout / Health / Family / None)
-13. Free-text: "Weak topics (self-identified)?"
-14. Free-text: "Strong topics?"
-15. AskUserQuestion: Start focus (multiSelect: true — DSA / System Design / Java Core / AI/LLM)
+11. Free-text: "Weak topics (self-identified)?"
+12. Free-text: "Strong topics?"
+13. AskUserQuestion: Start focus (multiSelect: true — DSA / System Design / Java Core / AI/LLM)
 
 Each question:
 - Short, direct, one concept per question
@@ -55,29 +53,32 @@ After onboarding, always show dashboard:
 
 ```
 👤 {Name} — {Role} ({Experience})
-🎯 Goal: {Target} | Timeline: {Timeline}
+🎯 Goal: {Target} | Pace: {Self-paced / Steady / Intensive}
 
 📊 Progress:
-DSA          [███████░░░░░] 58%
-Java Core    [████░░░░░░░░] 33%
-System Design[██░░░░░░░░░░] 18%
-AI/LLM       [█░░░░░░░░░░░] 8%
+DSA          [███████░░░░░] 58% ({done}/{total})
+Java Core    [████░░░░░░░░] 33% ({done}/{total})
+System Design[██░░░░░░░░░░] 18% ({done}/{total})
+AI/LLM       [█░░░░░░░░░░░] 8%  ({done}/{total})
 
-📅 Today: {Today's plan}
-🔥 Streak: {N} days
-📈 Consistency: {Score}
-✅ Readiness: {Score}
+🎯 Current Topic: {What user is working on}
+⏭  Next Up: {Next topic/problem in queue}
+✅ Readiness: {Score based on completion + confidence}
 
 💪 Strong: {Topics}
 ⚠️ Weak: {Topics}
 ```
 
+**Note:** No "Today's plan" or day-based schedule. Progress is topic-based. User drives pace.
+
 ---
 
 ## 3. Roadmap Engine
 
-Generate phased roadmap:
-- **Phase 1:** Foundation (topics, problems, timeline)
+**CRITICAL: NO time-based scheduling (no day/week plans). Topic-based progression only.**
+
+Generate phased roadmap by MILESTONES, not calendar:
+- **Phase 1:** Foundation (topics + problems, no deadline)
 - **Phase 2:** Intermediate
 - **Phase 3:** Advanced
 - **Phase 4:** Interview-ready
@@ -87,9 +88,11 @@ Each phase contains:
 - Problems (with URLs)
 - System design cases
 - Optional projects
-- Mini-milestones
+- Mini-milestones (topic completion, not time)
 
-Adapt based on: user level, weak areas, hot topics.
+User moves at their own pace. Can finish Phase 1 in a day or a month — their choice. No "day 1" / "week 2" language.
+
+Adapt based on: user level, weak areas, hot topics, user-reported confidence.
 
 ---
 
