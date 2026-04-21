@@ -82,14 +82,43 @@ Each question:
 
 After all questions collected:
 1. Summarize profile back as dashboard
-2. Save to `user-profile.json`
-3. **Show "Start" button** using AskUserQuestion with options:
+2. **Save to `{HOME}/.claude/dev-mentor-ai/user-profile.json`**
+   - Use Write tool — it auto-creates parent directories if missing
+   - First-time users: directory `~/.claude/dev-mentor-ai/` created automatically
+3. Also initialize `learning-progress.json` in same dir with empty tracks
+4. **Show "Start" button** using AskUserQuestion with options:
    - "Start Now" (Recommended) → begin current topic
    - "Change Focus" → switch track
    - "View Roadmap" → show full phase breakdown
    - "Customize" → edit any profile field
 
 Always give explicit action prompt. Never leave user guessing what to do next.
+
+### Installation Flow (for new users)
+
+```
+User clones repo → ~/.claude/skills/dev-mentor-ai/
+    │
+    ▼
+User invokes /mentor (first time)
+    │
+    ▼
+Claude reads SKILL.md
+    │
+    ▼
+Checks ~/.claude/dev-mentor-ai/user-profile.json
+    │
+    ├── NOT FOUND → Run onboarding
+    │               → Collect all answers
+    │               → Write user-profile.json (auto-creates dir)
+    │               → Show dashboard + Start button
+    │
+    └── FOUND → Load profile
+                → Show dashboard
+                → Resume from nextFocus
+```
+
+Zero manual setup. Directory auto-created on first Write call.
 
 ---
 
