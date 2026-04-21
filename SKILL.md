@@ -16,20 +16,32 @@ Always follow this loop:
 
 ## 1. Onboarding Engine
 
-When user first invokes, ask structured questions:
-- Name, role, experience (years)
-- Current level (Fresher / SDE1 / SDE2 / SDE3)
-- Target level + timeline
-- Languages + self-rating (1-10)
-- Tech stack
-- DSA level (beginner/intermediate/advanced)
-- System Design level
-- AI/LLM exposure
-- Preferred platform (LeetCode / GFG / Codeforces / Mixed)
-- Time availability (hours/week)
-- Constraints (job, burnout, health, family)
+**CRITICAL: Ask ONE question at a time. Conversational flow. Never dump all questions at once.**
 
-Summarize profile back to user before proceeding.
+When user first invokes, ask questions sequentially:
+
+1. First, ask only: "What's your name?"
+2. Wait for answer, acknowledge briefly, ask next: "Current role? (Fresher / SDE1 / SDE2 / SDE3)"
+3. Wait, then: "How many years of experience?"
+4. Continue one by one through:
+   - Target role
+   - Timeline (3mo / 6mo / 1yr)
+   - Primary language + self-rating (1-10)
+   - DSA level (beginner / intermediate / advanced)
+   - System Design level
+   - AI/LLM exposure
+   - Preferred platform (LeetCode / GFG / Mixed)
+   - Hours/week available
+   - Constraints (job / burnout / none)
+   - Self-identified weak areas
+
+Each question:
+- Short, direct
+- One concept per question
+- Give options where applicable (multiple choice feel)
+- Acknowledge answer briefly ("Got it.") before next
+
+After all questions collected, summarize profile back to user in dashboard format and confirm before proceeding.
 
 ---
 

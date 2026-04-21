@@ -1,52 +1,75 @@
-# Onboarding Template
+# Onboarding Flow — Sequential
 
-Welcome to DevMentor AI. Let me understand you first.
+**Rule: One question per message. Wait for user answer. Then next.**
 
-## Section 1: Who Are You?
+## Question Sequence
 
-1. **Name:** ?
-2. **Current Role:** (Fresher / SDE1 / SDE2 / SDE3 / Other)
-3. **Experience:** (Years / Months)
-4. **Current Company & Tech Stack:** ?
+### Q1: Name
+"What's your name?"
 
-## Section 2: Where Are You Going?
+### Q2: Role
+"Got it, {name}. What's your current role?
+(Fresher / SDE1 / SDE2 / SDE3 / Other)"
 
-5. **Target Role:** (SDE1 / SDE2 / SDE3 / Specific Company)
-6. **Timeline:** (3 months / 6 months / 1 year)
-7. **Why this goal?** (Optional — helps motivation tracking)
+### Q3: Experience
+"How many years/months of experience?"
 
-## Section 3: Current Skills (Rate 1-10)
+### Q4: Target Role
+"What's your target role?
+(SDE1 / SDE2 / SDE3 / Specific company)"
 
-8. **Primary Language + Rating:** (e.g., Java 7/10)
-9. **Secondary Languages:** (list with rating)
-10. **DSA Level:**
-    - Beginner (know basics, few problems solved)
-    - Intermediate (100+ problems, know patterns)
-    - Advanced (300+ problems, medium-hard comfort)
-11. **System Design Level:**
-    - Never studied
-    - Basic (caching, load balancing)
-    - Intermediate (CAP, sharding)
-    - Advanced (distributed systems)
-12. **AI/LLM Level:**
-    - None
-    - Used APIs (OpenAI, Claude)
-    - Built RAG apps
-    - Built agents (LangChain, LangGraph)
+### Q5: Timeline
+"Timeline for this goal?
+(3 months / 6 months / 1 year / Flexible)"
 
-## Section 4: Constraints
+### Q6: Primary Language
+"Primary programming language? Rate yourself 1-10."
 
-13. **Time Available:** (hours/week)
-14. **Preferred Platform:** (LeetCode / GFG / Codeforces / Mixed)
-15. **Blockers:** (Full-time job / Burnout / Health / Family)
-16. **Preferred Learning Style:** (Visual / Hands-on / Theoretical / Mixed)
+### Q7: DSA Level
+"DSA level?
+- Beginner (< 50 problems)
+- Intermediate (50-200 problems, know patterns)
+- Advanced (200+, medium-hard comfort)"
 
-## Section 5: Focus Areas
+### Q8: System Design Level
+"System Design level?
+- None (never studied)
+- Basic (caching, load balancing)
+- Intermediate (CAP, sharding, queues)
+- Advanced (distributed systems)"
 
-17. **Weak Areas (Self-identified):** ?
-18. **Strong Areas:** ?
-19. **Topics You Want to Master First:** ?
+### Q9: AI/LLM Level
+"AI/LLM exposure?
+- None
+- Used APIs (OpenAI, Claude)
+- Built RAG apps
+- Built agents (LangChain, LangGraph)"
+
+### Q10: Platform
+"Preferred platform?
+(LeetCode / GFG / Codeforces / Mixed)"
+
+### Q11: Time
+"How many hours per week can you commit?"
+
+### Q12: Blockers
+"Any blockers?
+(Full-time job / Burnout / Health / Family / None)"
+
+### Q13: Weak Areas
+"What topics do you struggle with most? (self-identified)"
+
+### Q14: Strong Areas
+"What topics are you confident in?"
+
+### Q15: Focus Start
+"Where do you want to start first?
+(DSA / System Design / Java Core / AI/LLM)"
 
 ---
 
-After collection, generate profile summary and confirm before proceeding.
+## After All Answers
+
+Summarize profile as dashboard + save to `user-profile.json`.
+
+Confirm: "Profile saved. Ready to start?"
