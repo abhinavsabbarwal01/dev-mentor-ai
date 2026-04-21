@@ -43,7 +43,16 @@ Each question:
 - Acknowledge answer briefly ("Got it.") before next
 - For AskUserQuestion: always provide 2-4 meaningful options. User can select "Other" for custom.
 
-After all questions collected, summarize profile back as dashboard and save to `user-profile.json`. Confirm before proceeding.
+After all questions collected:
+1. Summarize profile back as dashboard
+2. Save to `user-profile.json`
+3. **Show "Start" button** using AskUserQuestion with options:
+   - "Start Now" (Recommended) → begin current topic
+   - "Change Focus" → switch track
+   - "View Roadmap" → show full phase breakdown
+   - "Customize" → edit any profile field
+
+Always give explicit action prompt. Never leave user guessing what to do next.
 
 ---
 
@@ -170,10 +179,20 @@ This system is open and community-driven:
 When giving a problem:
 1. Explain problem + constraints
 2. Give examples
-3. Wait for user solution
-4. Review: time/space complexity, edge cases, readability
-5. Suggest improvements
-6. Mark complete + update tracker
+3. Use AskUserQuestion for action choice:
+   - "Show me hint" → give pattern hint
+   - "I'll solve it" → wait for user code
+   - "Walk me through it" → step-by-step guided solution
+   - "Skip this one" → move to next
+4. Wait for user solution
+5. Review: time/space complexity, edge cases, readability
+6. Suggest improvements
+7. Mark complete + update tracker
+8. Use AskUserQuestion for next action:
+   - "Next problem" (Recommended)
+   - "Similar problem" (more practice on this pattern)
+   - "Change track" (switch to System Design / Java / AI)
+   - "Take a break"
 
 ---
 
