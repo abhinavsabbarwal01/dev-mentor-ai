@@ -4,34 +4,36 @@
 $ErrorActionPreference = "Stop"
 
 $RepoUrl = "https://github.com/abhinavsabbarwal01/dev-mentor-ai.git"
-$InstallDir = "$env:USERPROFILE\.claude\skills\dev-mentor-ai"
+$SkillDir = "$env:USERPROFILE\.claude\skills\dev-mentor-ai"
+$TmpDir = Join-Path $env:TEMP "dev-mentor-ai-install-$(Get-Random)"
 
 Write-Host "🚀 Installing DevMentor AI..." -ForegroundColor Cyan
 
-# Check git installed
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
     Write-Host "❌ Error: git not installed. Install git first: https://git-scm.com/download/win" -ForegroundColor Red
     exit 1
 }
 
-# Check Claude Code config dir
-$ClaudeDir = "$env:USERPROFILE\.claude\skills"
-if (-not (Test-Path $ClaudeDir)) {
-    Write-Host "📁 Creating Claude config dir: $ClaudeDir" -ForegroundColor Yellow
-    New-Item -Path $ClaudeDir -ItemType Directory -Force | Out-Null
+$ClaudeSkillsDir = "$env:USERPROFILE\.claude\skills"
+if (-not (Test-Path $ClaudeSkillsDir)) {
+    New-Item -Path $ClaudeSkillsDir -ItemType Directory -Force | Out-Null
 }
 
-# If already installed, update instead
-if (Test-Path "$InstallDir\.git") {
-    Write-Host "⚙️  DevMentor AI already installed. Pulling latest..." -ForegroundColor Yellow
-    Set-Location $InstallDir
-    git pull origin main
-    Write-Host "✅ Updated to latest version." -ForegroundColor Green
-} else {
-    Write-Host "📥 Cloning repo to $InstallDir..." -ForegroundColor Yellow
-    git clone $RepoUrl $InstallDir
-    Write-Host "✅ Cloned successfully." -ForegroundColor Green
+Write-Host "📥 Cloning repo..." -ForegroundColor Yellow
+git clone --depth 1 $RepoUrl "$TmpDir\repo"
+
+if (Test-Path $SkillDir) {
+    $BackupDir = "$SkillDir.bak"
+    Write-Host "⚙️  Existing install found. Backing up to $BackupDir" -ForegroundColor Yellow
+    if (Test-Path $BackupDir) { Remove-Item -Recurse -Force $BackupDir }
+    Move-Item $SkillDir $BackupDir
 }
+
+Write-Host "📦 Installing skill to $SkillDir..." -ForegroundColor Yellow
+New-Item -Path $SkillDir -ItemType Directory -Force | Out-Null
+Copy-Item -Path "$TmpDir\repo\skills\dev-mentor-ai\*" -Destination $SkillDir -Recurse -Force
+
+Remove-Item -Recurse -Force $TmpDir
 
 Write-Host ""
 Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan

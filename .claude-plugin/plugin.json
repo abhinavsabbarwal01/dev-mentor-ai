@@ -1,0 +1,19 @@
+{
+  "name": "dev-mentor-ai",
+  "description": "Adaptive Engineering Growth OS — personalized mentoring, structured learning, career tracking for Fresher → SDE1 → SDE2 → SDE3",
+  "version": "1.0.0",
+  "author": {
+    "name": "Abhinav Sabbarwal",
+    "email": "abhinavsabbarwal01@gmail.com"
+  },
+  "homepage": "https://github.com/abhinavsabbarwal01/dev-mentor-ai",
+  "repository": "https://github.com/abhinavsabbarwal01/dev-mentor-ai",
+  "license": "MIT",
+  "keywords": [
+    "learning",
+    "mentorship",
+    "career",
+    "sde",
+    "engineering-growth"
+  ]
+}

@@ -5,33 +5,32 @@
 set -e
 
 REPO_URL="https://github.com/abhinavsabbarwal01/dev-mentor-ai.git"
-INSTALL_DIR="$HOME/.claude/skills/dev-mentor-ai"
+SKILL_DIR="$HOME/.claude/skills/dev-mentor-ai"
+TMP_DIR="$(mktemp -d)"
 
 echo "🚀 Installing DevMentor AI..."
 
-# Check git installed
 if ! command -v git &> /dev/null; then
     echo "❌ Error: git not installed. Install git first: https://git-scm.com/downloads"
     exit 1
 fi
 
-# Check Claude Code config dir
-if [ ! -d "$HOME/.claude" ]; then
-    echo "📁 Creating Claude config dir: $HOME/.claude"
-    mkdir -p "$HOME/.claude/skills"
+mkdir -p "$HOME/.claude/skills"
+
+echo "📥 Cloning repo..."
+git clone --depth 1 "$REPO_URL" "$TMP_DIR/repo"
+
+if [ -d "$SKILL_DIR" ]; then
+    echo "⚙️  Existing install found. Backing up to ${SKILL_DIR}.bak"
+    rm -rf "${SKILL_DIR}.bak"
+    mv "$SKILL_DIR" "${SKILL_DIR}.bak"
 fi
 
-# If already installed, update instead
-if [ -d "$INSTALL_DIR/.git" ]; then
-    echo "⚙️  DevMentor AI already installed. Pulling latest..."
-    cd "$INSTALL_DIR"
-    git pull origin main
-    echo "✅ Updated to latest version."
-else
-    echo "📥 Cloning repo to $INSTALL_DIR..."
-    git clone "$REPO_URL" "$INSTALL_DIR"
-    echo "✅ Cloned successfully."
-fi
+echo "📦 Installing skill to $SKILL_DIR..."
+mkdir -p "$SKILL_DIR"
+cp -R "$TMP_DIR/repo/skills/dev-mentor-ai/." "$SKILL_DIR/"
+
+rm -rf "$TMP_DIR"
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

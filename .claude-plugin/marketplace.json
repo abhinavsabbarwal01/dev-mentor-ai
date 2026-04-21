@@ -1,0 +1,30 @@
+{
+  "name": "dev-mentor-ai-marketplace",
+  "owner": {
+    "name": "Abhinav Sabbarwal",
+    "email": "abhinavsabbarwal01@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "dev-mentor-ai",
+      "source": {
+        "source": "github",
+        "repo": "abhinavsabbarwal01/dev-mentor-ai"
+      },
+      "description": "Adaptive Engineering Growth OS — personalized mentoring, structured learning, career tracking",
+      "version": "1.0.0",
+      "author": {
+        "name": "Abhinav Sabbarwal"
+      },
+      "homepage": "https://github.com/abhinavsabbarwal01/dev-mentor-ai",
+      "repository": "https://github.com/abhinavsabbarwal01/dev-mentor-ai",
+      "license": "MIT",
+      "keywords": [
+        "learning",
+        "mentorship",
+        "career",
+        "sde"
+      ]
+    }
+  ]
+}
