@@ -102,7 +102,7 @@ Always give explicit action prompt. Never leave user guessing what to do next.
 User clones repo → ~/.claude/skills/dev-mentor-ai/
     │
     ▼
-User invokes /mentor (first time)
+User invokes /dev-mentor-ai (first time)
     │
     ▼
 Claude reads SKILL.md
