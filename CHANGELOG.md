@@ -14,7 +14,7 @@ First production release.
 - Dashboard engine with section breadcrumbs on every response
 - Phased roadmap (topic-based, not time-based)
 - Hot topics injection from `docs/hot-topics.json`
-- Six conversational modes: Mentor, Interview, Caveman, Deep Dive, Revision, Mock
+- Five conversational modes: Mentor, Interview, Deep Dive, Revision, Mock
 - Weekly review engine
 - Engineer DNA inference (strengths, weaknesses, learning style)
 - Portable profile storage at `~/.claude/dev-mentor-ai/user-profile.json`

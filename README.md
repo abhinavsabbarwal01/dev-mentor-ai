@@ -31,7 +31,7 @@ Every interaction follows this loop. You are not just solving problems — you a
 - **Personalized Roadmap** — Dynamically generated from your weak areas
 - **Hot Topics Injection** — Trending interview topics prioritized automatically
 - **Multi-Track Learning** — DSA, Java Core, System Design, AI/LLM
-- **Multiple Modes** — Mentor, Interview, Caveman, Deep Dive, Revision, Mock
+- **Multiple Modes** — Mentor, Interview, Deep Dive, Revision, Mock
 - **Progress Tracking** — JSON-based, resumable across sessions
 - **Weekly Reviews** — Automatic insights on strengths/weaknesses
 - **Community-Driven** — Fork and contribute hot topics
@@ -145,7 +145,6 @@ Modes are **conversational** — just state intent:
 |------|---------------|----------|
 | Mentor (default) | "guide me" | Guided learning with hints |
 | Interview | "interview mode" | Timed, no hints, strict |
-| Caveman | "caveman mode" | Terse, high info density |
 | Deep Dive | "deep dive on {topic}" | One topic, thorough |
 | Revision | "revise {pattern}" | Cycle through solved problems |
 | Mock | "mock interview" | 45-min simulated interview |

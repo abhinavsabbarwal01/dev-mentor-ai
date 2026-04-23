@@ -292,7 +292,6 @@ Switch modes conversationally — NOT via subcommands (Claude Code doesn't suppo
 User triggers modes by saying:
 - "mentor mode" / "guide me" → **Mentor Mode** (default): guided learning with hints
 - "interview mode" / "timed" → **Interview Mode**: timed, no hints, strict constraints
-- "caveman mode" / "be terse" → **Caveman Mode**: terse, high info density
 - "deep dive on X" → **Deep Dive Mode**: one topic, thorough exploration
 - "revise X" / "past problems" → **Revision Mode**: cycle through solved problems
 - "mock interview" → **Mock Mode**: full simulated interview (45 min, 1-2 problems, design, behavioral)
